@@ -152,3 +152,24 @@ println!("x = {} and y = {}", x, y);
 
 
 To test the project use cargo run 
+
+-Generating the random number-
+
+To generate this we will use the rand crate 
+
+to do this you must go to the Cargo.toml and add the rand crate under dependencies then build the program using cargo build 
+
+rand = "0.5.5"
+
+You will see this download it then compile rand
+
+Cargo fetches the latest versions of everything from the registry, which is a copy of data from Crates.io. Crates.io is where people in the Rust ecosystem post their open source Rust projects for others to use. similar to npm and shit 
+
+If you immediately run cargo build again without making any changes, you won’t get any output aside from the Finished line. Cargo knows it has already downloaded and compiled the dependencies, and you haven’t changed anything about them in your Cargo.toml file. Cargo also knows that you haven’t changed anything about your code, so it doesn’t recompile that either. With nothing to do, it simply exits.
+
+Cargo eill lock the current state of dependnices when you first run cargo build
+
+To update this you must run the command cargo update which will update the Cargo.lock. file and update the dependencies and alla that stuff 
+
+-Comparing the Guess to the to the secret number-
+
