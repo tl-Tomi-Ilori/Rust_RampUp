@@ -12,7 +12,7 @@ tuples, structs and enums to aggregate data
 pattern matching to select and destructure data
 traits to define behaviour on data
 
-Setup
+=-Setup-=
 
 First you need to install rust it is ideal to have homebrew installed to tun the brew, to do this open the terminal and run the following commands
 
@@ -34,7 +34,7 @@ you then need to check if you have cargo which is rusts package manager
 
 cargo --version
 
---First Project--
+=-First Project-=
 
 Using rusts package manager we will create a simple hello world Project
 
@@ -48,3 +48,22 @@ to run a rust project you must use the following commands **In the folder where 
 
 cargo build
 cargo run
+
+=-Anatomy of a rust program-=
+fn main() is the first code that runs in every rust program
+
+Important details in hello_world program
+
+1.Rust style is to indent with four spaces, not a tab.
+2.using a ! means that you’re calling a macro instead of a normal function.
+3.you see the "Hello, world!" string. We pass this string as an argument to println!
+4.we end the line with a semicolon (;), which indicates that this expression is over and the next one is ready to begin.
+
+***Compiling and Running Are Separate Steps***
+
+Before running a Rust program, you must compile it using the Rust compiler by entering the rustc command and passing it the name of your source file, like this:
+
+rustc main.rs
+
+if you use ls in the direftory your in you will see 2 files main an main.rs
+main is the executable file where main.rs is the file where the source code lies 
