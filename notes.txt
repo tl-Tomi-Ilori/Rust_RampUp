@@ -67,3 +67,31 @@ rustc main.rs
 
 if you use ls in the direftory your in you will see 2 files main an main.rs
 main is the executable file where main.rs is the file where the source code lies 
+
+
+=-Cargo-=
+
+Cargo is Rust’s build system and package manager. it hanldes building your code downloading libraries and building them (dependencies)
+
+-Cargo.toml-
+
+This file is in the TOML format which is Cargo’s configuration format.
+
+1. The first line, [package], is a section heading that indicates that the following statements are configuring a package. As we add more information to this file, we’ll add other sections.
+2.The next four lines set the configuration information Cargo needs to compile your program: the name, the version, who wrote it, and the edition of Rust to use. Cargo gets your name and email information from your environment, so if that information is not correct, fix the information now and then save the file. 
+3.The last line, [dependencies], is the start of a section for you to list any of your project’s dependencies. In Rust, packages of code are referred to as crates. 
+
+**Cargo expects your source files to live inside the src directory. **
+
+The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code.
+
+Running cargo build for the first time also causes Cargo to create a new file at the top level: Cargo.lock. This file keeps track of the exact versions of dependencies in your project
+
+Cargo also provides a command called cargo check. This command quickly checks your code to make sure it compiles but doesn’t produce an executable:
+
+ cargo check is much faster than cargo build, because it skips the step of producing an executable. 
+
+
+=-Guessing Game-=
+
+set up a new project using the cargo new command
