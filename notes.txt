@@ -173,3 +173,32 @@ To update this you must run the command cargo update which will update the Cargo
 
 -Comparing the Guess to the to the secret number-
 
+In this section we will add another use statement bringing in a type called std::cmp::Ordering
+
+Ordering is another ennum but the variants are Less, Greater, and Equal. These are the three outcomes that are possible when you compare two values.
+
+he cmp method compares two values and can be called on anything that can be compared. It takes a reference to whatever you want to compare with: 
+
+Then it returns a variant of the Ordering enum we brought into scope with the use statement. We use a match expression to decide what to do next based on which variant of Ordering was returned from the call to cmp with the values in guess and secret_number.
+
+A match expression is made up of arms. An arm consists of a pattern and the code that should be run if the value given to the beginning of the match expression fits that arm’s pattern. Rust takes the value given to match and looks through each arm’s pattern in turn.
+
+ Rust has a strong, static type system. However, it also has type inference. When we wrote let mut guess = String::new(), Rust was able to infer that guess should be a String and didn’t make us write the type. The secret_number, on the other hand, is a number type. 
+
+ Ultimately, we want to convert the String the program reads as input into a real number type so we can compare it numerically to the secret number. We can do that by adding another line to the main function body:
+
+     let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
+let guess: allows us to shadow guess 
+
+This means instead of using a nw variable we can just reuse the guess variable 
+
+let guess: u32. The colon (:) after guess tells Rust we’ll annotate the variable’s type. Rust has a few built-in number types; the u32 seen here is an unsigned, 32-bit integerß
+
+-Looping the game-
+
+Placing your code in the loop block allows you to create a loop which loops infinetely , but typing quit actually quits the game.
+
+To make the game end when the right nnumber is guessed we can add a block of code to our Equal. arm, adding the break after you win ends the loop 
+
+T hadnle user input even better we can change the guess to a match and add arms where we check if Ok or Err were returned 
