@@ -11,3 +11,40 @@ functions, methods and closures to operate on data
 tuples, structs and enums to aggregate data
 pattern matching to select and destructure data
 traits to define behaviour on data
+
+Setup
+
+First you need to install rust it is ideal to have homebrew installed to tun the brew, to do this open the terminal and run the following commands
+
+in the terminal run the following : brew install rustup
+
+After you run this command you can install the compiler and package manager
+
+rustup-init
+
+**When you run this command select option 1***
+
+To verify the installation run the command: rustc —-version
+
+To enable use of rust in vscode we have to use the RLS (rust language server)
+
+download the rust extension this will contain the RLS
+
+you then need to check if you have cargo which is rusts package manager
+
+cargo --version
+
+--First Project--
+
+Using rusts package manager we will create a simple hello world Project
+
+to do this cd into the desired folder and run 
+
+cargo new [project_name]
+
+A folder and a file called main.rs should be created 
+
+to run a rust project you must use the following commands **In the folder where the project is**
+
+cargo build
+cargo run
